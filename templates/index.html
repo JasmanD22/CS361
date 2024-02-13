@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <a href="/create">Create a New Task</a>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <form action="/tasks/{{ task.id }}/complete" method="post" style="display: inline;">
+                <input type="checkbox" name="completed" onchange="this.form.submit()" {{ 'checked' if task.completed else '' }}> {{ task.title }}
+            </form>
+            - {{ task.details }} - Due: {{ task.date.strftime('%Y-%m-%d') }} at {{ task.time.strftime('%H:%M') }}
+            {% if task.end_time %} to {{ task.end_time.strftime('%H:%M') }}{% endif %}, Priority: {{ task.priority }}
+            <a href="/tasks/{{ task.id }}/edit">Edit</a>
+            <form action="/tasks/{{ task.id }}/delete" method="post" style="display: inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

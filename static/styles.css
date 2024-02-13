@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+label, textarea, input[type="text"] {
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
