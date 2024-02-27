@@ -10,6 +10,7 @@ if response.status_code == 200:
     print("Room temperatures:", room_temperatures)
 else:
     print("Failed to retrieve room temperatures:", response.status_code)
+    
 Will replace 'http://localhost:5000/room_temperatures' with the actual URL of your microservice unless you want it to stay local.
 
 To programmatically update room temperature data in the microservice, you can send an HTTP POST request to the /room_temperatures endpoint with the new data in JSON format. Here's an example using Python's requests library:
