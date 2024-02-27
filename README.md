@@ -32,4 +32,5 @@ else:
     print("Failed to update room temperatures:", response.status_code)
 
 UML:
-https://github.com/JasmanD22/CS361/issues/1#issue-2155707971
+![I Main Screen o Check box for](https://github.com/JasmanD22/CS361/assets/122345230/f606f2fd-9844-4d01-81a1-5b2d752eec59)
+
